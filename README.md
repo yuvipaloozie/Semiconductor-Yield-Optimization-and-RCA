@@ -76,15 +76,3 @@ To make this actionable, I used **Partial Dependence Plots (PDP)** to define the
 This project moves beyond "black box" prediction to provide transparent engineering solutions. By implementing the recommended control limit on Sensor 103 and using the cost-optimized detection model, the manufacturing process can significantly reduce scrap rates, translating to estimated savings of **$50,000 - $100,000 per year** (based on projected scrap reduction).
 
 ---
-
-## 6. How to Run This Project
-1.  **Clone the Repo:**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/secom-yield-optimization.git](https://github.com/YOUR_USERNAME/secom-yield-optimization.git)
-    ```
-2.  **Install Requirements:**
-    ```bash
-    pip install pandas numpy xgboost shap scikit-learn matplotlib seaborn
-    ```
-3.  **Run the Notebook:**
-    Open `SECOM_Yield_Analysis.ipynb` in Jupyter or Google Colab.
