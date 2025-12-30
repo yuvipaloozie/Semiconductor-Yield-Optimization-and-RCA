@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Model-orange?style=for-the-badge)
 ![SHAP](https://img.shields.io/badge/SHAP-Explainability-ff69b4?style=for-the-badge)
-![Domain](https://img.shields.io/badge/Domain-Semiconductor%20Manufacturing-lightgrey?style=for-the-badge)
+![Domain](https://img.shields.io/badge/Domain-Manufacturing-lightgrey?style=for-the-badge)
 
 ## 1. Executive Summary
 In semiconductor manufacturing, yield excursions (scrap batches) are incredibly costly. Traditional Statistical Process Control (SPC) often misses complex, multivariate interactions that lead to defects.
