@@ -1,4 +1,5 @@
-# Seminconductor Yield Optimization & Root Cause Analysis
+# Semiconductor Yield Optimization & Root Cause Analysis
+### Determining Critical Sensor Limits for Semiconductor Batch Success
 
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
@@ -25,7 +26,7 @@ This project developed a machine learning pipeline to:
 
 ---
 
-## 3. Solution Architecture
+## Code Structure
 
 ### Phase 1: Data Engineering ("The Sanitation Layer")
 Raw sensor data is rarely model-ready. I implemented a robust preprocessing pipeline:
@@ -72,7 +73,7 @@ To make this actionable, I used **Partial Dependence Plots (PDP)** to define the
 
 ---
 
-## 5. Conclusion & Value Add
+## Results and Evaluations
 This project moves beyond "black box" prediction to provide transparent engineering solutions. By implementing the recommended control limit on Sensor 103 and using the cost-optimized detection model, the manufacturing process can significantly reduce scrap rates, translating to estimated savings of **$50,000 - $100,000 per year** (based on projected scrap reduction).
 
 ---
