@@ -2,10 +2,18 @@
 ### Determining Critical Sensor Limits for Semiconductor Batch Success
 
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+
+![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
 ![XGBoost](https://img.shields.io/badge/XGBoost-Model-orange?style=for-the-badge)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![SHAP](https://img.shields.io/badge/SHAP-Explainability-ff69b4?style=for-the-badge)
-![Domain](https://img.shields.io/badge/Domain-Manufacturing-lightgrey?style=for-the-badge)
+![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
+![Domain](https://img.shields.io/badge/Domain-Semiconductor%20Manufacturing-lightgrey?style=for-the-badge)
 
 ## Summary
 In semiconductor manufacturing, yield excursions (scrap batches) are incredibly costly. Traditional Statistical Process Control (SPC) often misses complex, multivariate interactions that lead to defects.
