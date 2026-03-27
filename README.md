@@ -1,7 +1,6 @@
 # Semiconductor Yield Optimization & Root Cause Analysis
 ### Determining Critical Sensor Limits for Semiconductor Batch Success
 
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Model-orange?style=for-the-badge)
