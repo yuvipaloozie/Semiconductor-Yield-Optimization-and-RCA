@@ -5,7 +5,6 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Model-orange?style=for-the-badge)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![SHAP](https://img.shields.io/badge/SHAP-Explainability-ff69b4?style=for-the-badge)
 ![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Domain](https://img.shields.io/badge/Domain-Semiconductor%20Manufacturing-lightgrey?style=for-the-badge)
 
