@@ -18,7 +18,7 @@ This project developed a machine learning pipeline to:
 
 ---
 
-## 2. The Business Problem
+## The Business Problem
 * **The Data:** UCI SECOM Dataset (Semiconductor Manufacturing). 590 sensors, ~1500 batches.
 * **The Challenge:**
     * **Extreme Class Imbalance:** Failures are rare (~6%), making standard models biased toward "Pass."
@@ -29,13 +29,13 @@ This project developed a machine learning pipeline to:
 
 ## Code Structure
 
-### Phase 1: Data Engineering ("The Sanitation Layer")
+### 1: Data Engineering ("The Sanitation Layer")
 Raw sensor data is rarely model-ready. I implemented a robust preprocessing pipeline:
 * **Variance Thresholding:** Removed 100+ "dead" sensors (zero variance).
 * **Multicollinearity Filter:** Dropped redundant features ($r > 0.95$) to reduce noise.
 * **KNN Imputation:** Used K-Nearest Neighbors to fill missing data, preserving the physical correlation structure between sensors (e.g., Temp/Pressure relationships).
 
-### Phase 2: Cost-Sensitive Modeling
+### 2: Cost-Sensitive Modeling
 I trained an **XGBoost Classifier** specifically tuned for imbalance:
 * **Class Weights:** Applied `scale_pos_weight` to heavily penalize missed failures.
 * **Hyperparameter Tuning:** Used `RandomizedSearchCV` to optimize tree depth and learning rate.
@@ -43,7 +43,7 @@ I trained an **XGBoost Classifier** specifically tuned for imbalance:
     * **ROC-AUC:** Improved from 0.50 (Baseline) to **0.733** (Tuned).
     * **Recall:** The final model captures **48%** of all defects.
 
-### Phase 3: Financial Optimization
+### 3: Financial Optimization
 Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated the "Business Cost Curve" to find the sweet spot.
 
 * **F1-Score Threshold:** 0.45 (Balances Precision/Recall statistically).
@@ -53,16 +53,14 @@ Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated 
 ![Business Cost Curve](YOUR_IMAGE_PATH_HERE/cost_curve.png)
 *Figure 1: The "Sweet Spot" for the decision threshold that minimizes total business cost.*
 
----
-
-## 4. Engineering Insights (Root Cause Analysis)
+### 4. Engineering Insights (Root Cause Analysis)
 
 ### The Primary Driver: Sensor 103
 Using **SHAP (SHapley Additive exPlanations)**, we identified **Sensor 103** as the #1 predictor of failure.
 
 ![SHAP Summary Plot](YOUR_IMAGE_PATH_HERE/shap_summary.png)
 
-### Virtual Metrology: Defining New Limits
+### 5. Virtual Metrology
 To make this actionable, I used **Partial Dependence Plots (PDP)** to define the "Safe Operating Window" for Sensor 103.
 
 * **Observation:** The process is stable when Sensor 103 reads below **-0.012**.
