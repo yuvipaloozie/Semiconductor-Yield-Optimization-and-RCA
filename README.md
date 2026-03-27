@@ -24,7 +24,7 @@ This project developed a machine learning pipeline to:
 * **The Challenge:**
     * **Extreme Class Imbalance:** Failures are rare (~6%), making standard models biased toward "Pass."
     * **High Dimensionality & Noise:** Hundreds of redundant or "dead" sensors.
-    * **Cost Asymmetry:** A missed failure (False Negative) costs **$10,000**, while a false alarm (False Positive) costs only **$500**.
+    * **Cost Asymmetry (simulated):** A missed failure (False Negative) costs **$10,000**, while a false alarm (False Positive) costs only **$500**.
 
 ---
 
