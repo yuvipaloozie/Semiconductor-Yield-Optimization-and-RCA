@@ -15,7 +15,7 @@ In semiconductor manufacturing, yield excursions (scrap batches) are incredibly 
 This project developed a machine learning pipeline to:
 1.  **Predict Failures:** Identifying **48% of yield excursions** that were previously missed by standard controls.
 2.  **Optimize Business Value:** Tuned the model based on financial impact (Cost of Scrap vs. Cost of Inspection) rather than just raw accuracy.
-3.  **Define Control Limits:** Used "Virtual Metrology" to propose actionable changes to the Process Control Plan (PCP), specifically tighter limits on **Sensor 103**.
+3.  **Define Control Limits:** Used interpretability techniques to propose actionable changes to the Process Control Plan (PCP), specifically tighter limits on **Sensor 103**.
 
 ---
 
