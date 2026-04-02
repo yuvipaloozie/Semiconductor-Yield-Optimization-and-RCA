@@ -50,7 +50,7 @@ Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated 
 * **Minimum Cost Threshold:** **0.35**.
 * **Decision:** We selected the **0.35** threshold. While this increases false alarms, it minimizes total financial loss by catching the most expensive scrap events.
 
-![Business Cost Curve](YOUR_IMAGE_PATH_HERE/cost_curve.png)
+![Business Cost Curve](assets/business_cost.png)
 *Figure 1: The "Sweet Spot" for the decision threshold that minimizes total business cost.*
 
 ### 4. Engineering Insights (Root Cause Analysis)
