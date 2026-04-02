@@ -29,7 +29,7 @@ This project developed a machine learning pipeline to:
 
 ## Code Structure
 
-### 1: Data Engineering ("The Sanitation Layer")
+### 1: Preprocessing/Cleaning
 Raw sensor data is rarely model-ready. I implemented a robust preprocessing pipeline:
 * **Variance Thresholding:** Removed 100+ "dead" sensors (zero variance).
 * **Multicollinearity Filter:** Dropped redundant features ($r > 0.95$) to reduce noise.
@@ -46,8 +46,8 @@ I trained an **XGBoost Classifier** specifically tuned for imbalance:
 ### 3: Financial Optimization
 Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated the "Business Cost Curve" to find the sweet spot.
 
-* **F1-Score Threshold:** 0.45 (Balances Precision/Recall statistically).
-* **Minimum Cost Threshold:** **0.35** (Aggressive detection).
+* **F1-Score Threshold:** 0.45.
+* **Minimum Cost Threshold:** **0.35**.
 * **Decision:** We selected the **0.35** threshold. While this increases false alarms, it minimizes total financial loss by catching the most expensive scrap events.
 
 ![Business Cost Curve](YOUR_IMAGE_PATH_HERE/cost_curve.png)
