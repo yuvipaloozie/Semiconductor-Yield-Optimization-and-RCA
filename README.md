@@ -16,6 +16,8 @@ This project developed a machine learning pipeline to:
 2.  **Optimize Business Value:** Tuned the model based on financial impact (Cost of Scrap vs. Cost of Inspection) rather than just raw accuracy.
 3.  **Define Control Limits:** Used interpretability techniques to propose actionable changes to the Process Control Plan (PCP), specifically tighter limits on **Sensor 103**.
 
+For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit which simulates live inference on process data for predicting real time yield status. The link to the dashboard can be viewed here: https://secom-dash.streamlit.app/ 
+
 ---
 
 ## The Business Problem
@@ -73,8 +75,6 @@ To make this actionable, I used **Partial Dependence Plots (PDP)** to define the
 
 ## Results and Evaluations
 This project moves beyond "black box" prediction to provide transparent engineering solutions. By implementing the recommended control limit on Sensor 103 and using the cost-optimized detection model, the manufacturing process can significantly reduce scrap rates, translating to estimated savings of **$50,000 - $100,000 per year** (based on projected scrap reduction).
-
-For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit which simulates live inference on process data for predicting real time yield status. The link to the dashboard can be viewed here: https://secom-dash.streamlit.app/ 
 
 ---
 ## Future Steps
