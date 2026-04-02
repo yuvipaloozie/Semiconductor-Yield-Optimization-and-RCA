@@ -51,7 +51,6 @@ Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated 
 * **Decision:** We selected the **0.35** threshold. While this increases false alarms, it minimizes total financial loss by catching the most expensive scrap events.
 
 ![Business Cost Curve](assets/business_impact.png)
-*Figure 1: The "Sweet Spot" for the decision threshold that minimizes total business cost.*
 
 ### 4. Engineering Insights (Root Cause Analysis)
 
@@ -68,7 +67,7 @@ To make this actionable, I used **Partial Dependence Plots (PDP)** to define the
 * **Recommendation:** Tighten the Upper Control Limit (UCL) for Sensor 103 to **-0.012**.
 
 ![Sensor 103 PDP](assets/operating_103.png)
-*Figure 2: Virtual Metrology showing the exact "Risk Cliff" for Sensor 103.*
+
 
 ---
 
