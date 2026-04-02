@@ -50,7 +50,7 @@ Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated 
 * **Minimum Cost Threshold:** **0.35**.
 * **Decision:** We selected the **0.35** threshold. While this increases false alarms, it minimizes total financial loss by catching the most expensive scrap events.
 
-![Business Cost Curve](assets/business_cost.png)
+![Business Cost Curve](assets/business_impact.png)
 *Figure 1: The "Sweet Spot" for the decision threshold that minimizes total business cost.*
 
 ### 4. Engineering Insights (Root Cause Analysis)
@@ -58,7 +58,7 @@ Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated 
 ### The Primary Driver: Sensor 103
 Using **SHAP (SHapley Additive exPlanations)**, we identified **Sensor 103** as the #1 predictor of failure.
 
-![SHAP Summary Plot](YOUR_IMAGE_PATH_HERE/shap_summary.png)
+![SHAP Summary Plot](assets/shap_summary.png)
 
 ### 5. Virtual Metrology
 To make this actionable, I used **Partial Dependence Plots (PDP)** to define the "Safe Operating Window" for Sensor 103.
@@ -67,13 +67,15 @@ To make this actionable, I used **Partial Dependence Plots (PDP)** to define the
 * **Risk Spike:** Failure probability doubles immediately when the value crosses **-0.009**.
 * **Recommendation:** Tighten the Upper Control Limit (UCL) for Sensor 103 to **-0.012**.
 
-![Sensor 103 PDP](YOUR_IMAGE_PATH_HERE/pdp_plot.png)
+![Sensor 103 PDP](assets/operating_103.png)
 *Figure 2: Virtual Metrology showing the exact "Risk Cliff" for Sensor 103.*
 
 ---
 
 ## Results and Evaluations
 This project moves beyond "black box" prediction to provide transparent engineering solutions. By implementing the recommended control limit on Sensor 103 and using the cost-optimized detection model, the manufacturing process can significantly reduce scrap rates, translating to estimated savings of **$50,000 - $100,000 per year** (based on projected scrap reduction).
+
+For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit which simulates live inference on process data for predicting real time yield status. The link to the dashboard can be viewed here: https://secom-dash.streamlit.app/ 
 
 ---
 ## Future Steps
