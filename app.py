@@ -86,7 +86,7 @@ X_live, y_live = load_and_prep_data("data/uci-secom.csv")
 
 TOP_3 = TOP_SENSORS[:3]
 
-st.title("Plant Operations HMI")
+st.title("Plant Operations Dashboard")
 st.markdown("Live SCADA View")
 
 st.sidebar.header("System Controls")
