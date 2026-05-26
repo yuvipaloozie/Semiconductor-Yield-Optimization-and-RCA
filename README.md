@@ -45,11 +45,11 @@ I trained an **XGBoost Classifier** specifically tuned for imbalance:
     * **Recall:** The final model captures **48%** of all defects.
 
 ### 3: Financial Optimization
-Standard model thresholds (0.50) are suboptimal for manufacturing. I calculated the "Business Cost Curve" to find the sweet spot.
+A standard threshold of 0.50 for this is suboptimal for higher stakes environments (like manufacturing) where the functional cost of a false negative is much more than a false positive. To account for this, I optimized the model with financial weighting:
 
 * **F1-Score Threshold:** 0.45.
 * **Minimum Cost Threshold:** **0.35**.
-* **Decision:** We selected the **0.35** threshold. While this increases false alarms, it minimizes total financial loss by catching the most expensive scrap events.
+* **Decision:** We selected the **0.35** threshold. While this increases the risk false alarms, it minimizes total financial loss by catching the most expensive scrap events.
 
 ![Business Cost Curve](assets/business_impact.png)
 
