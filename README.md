@@ -54,14 +54,12 @@ A standard threshold of 0.50 for this is suboptimal for higher stakes environmen
 ![Business Cost Curve](assets/business_impact.png)
 
 ### 4. Engineering Insights (Root Cause Analysis)
-
-### The Primary Driver: Sensor 103
 Using **SHAP (SHapley Additive exPlanations)**, we identified **Sensor 103** as the #1 predictor of failure.
 
 ![SHAP Summary Plot](assets/shap_summary.png)
 
 ### 5. Virtual Metrology
-To make this actionable, I used **Partial Dependence Plots (PDP)** to define the "Safe Operating Window" for Sensor 103.
+To make this actionable, I used **Partial Dependence Plots (PDP)** to define the "Safe Operating Window" for Sensor 103 (based on the SHAP findings).
 
 * **Observation:** The process is stable when Sensor 103 reads below **-0.012**.
 * **Risk Spike:** Failure probability doubles immediately when the value crosses **-0.009**.
