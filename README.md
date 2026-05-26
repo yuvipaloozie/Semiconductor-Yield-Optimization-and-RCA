@@ -1,5 +1,5 @@
 # Semiconductor Yield Optimization & Root Cause Analysis
-### Determining Critical Sensor Limits for Semiconductor Batch Success
+### Determining Sensor Limits for Manufacturing using XGBoost and SHAP
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
