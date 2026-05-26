@@ -9,14 +9,13 @@
 ![Domain](https://img.shields.io/badge/Domain-Semiconductor%20Manufacturing-lightgrey?style=for-the-badge)
 
 ## Summary
-In semiconductor manufacturing, yield excursions (scrap batches) are incredibly costly. Traditional Statistical Process Control (SPC) often misses complex, multivariate interactions that lead to defects.
-
-This project developed a machine learning pipeline to:
+In semiconductor manufacturing, scrap batches are incredibly costly. Traditional Statistical Process Control (SPC) often misses complex, multivariate interactions that lead to defects.
+To solve this, this project developed a machine learning pipeline to:
 1.  **Predict Failures:** Identifying **48% of yield excursions** that were previously missed by standard controls.
 2.  **Optimize Business Value:** Tuned the model based on financial impact (Cost of Scrap vs. Cost of Inspection) rather than just raw accuracy.
-3.  **Define Control Limits:** Used interpretability techniques to propose actionable changes to the Process Control Plan (PCP), specifically tighter limits on **Sensor 103**.
+3.  **Define Control Limits:** Used interpretability techniques to propose actionable changes similar to SPC.
 
-For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit which simulates live inference on process data for predicting real time yield status. The link to the dashboard can be viewed here: https://secom-dash.streamlit.app/ 
+For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit, which simulates live inference on process data for predicting real time yield status. The link to the dashboard can be viewed here: https://secom-dash.streamlit.app/ 
 
 ---
 
@@ -24,7 +23,7 @@ For further visualization, the code from the notebook has been implemented to ge
 * **The Data:** UCI SECOM Dataset (Semiconductor Manufacturing). 590 sensors, ~1500 batches.
 * **The Challenge:**
     * **Extreme Class Imbalance:** Failures are rare (~6%), making standard models biased toward "Pass."
-    * **High Dimensionality & Noise:** Hundreds of redundant or "dead" sensors.
+    * **High Dimensionality & Noise:** Hundreds of redundant sensors.
     * **Cost Asymmetry (simulated):** A missed failure (False Negative) costs **$10,000**, while a false alarm (False Positive) costs only **$500**.
 
 ---
@@ -32,7 +31,7 @@ For further visualization, the code from the notebook has been implemented to ge
 ## Code Structure
 
 ### 1: Preprocessing/Cleaning
-Raw sensor data is rarely model-ready. I implemented a robust preprocessing pipeline:
+Raw sensor data is rarely model-ready, so I implemented a robust preprocessing pipeline:
 * **Variance Thresholding:** Removed 100+ "dead" sensors (zero variance).
 * **Multicollinearity Filter:** Dropped redundant features ($r > 0.95$) to reduce noise.
 * **KNN Imputation:** Used K-Nearest Neighbors to fill missing data, preserving the physical correlation structure between sensors (e.g., Temp/Pressure relationships).
@@ -80,3 +79,4 @@ This project moves beyond "black box" prediction to provide transparent engineer
 ## Future Steps
 - Consider extension of this dataset using synthetic data generation for training new models
 - Use a simpler tree based model to create interpretable procedural documents in a flowchart/tree for operators
+- Utilize a constrained VAE to develop a more balanced dataset for training
