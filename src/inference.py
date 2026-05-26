@@ -4,7 +4,7 @@ import time
 from src.preprocessing import clean_and_prepare_data
 
 def run_live_simulation(data_path, num_batches=10):
-    print("\n--- INITIALIZING PLC INFERENCE ENGINE ---")
+    print("\n Intializing Inference:")
     model = joblib.load('models/secom_v1_model.pkl')
     
     with open('models/threshold.txt', 'r') as f:
@@ -18,7 +18,7 @@ def run_live_simulation(data_path, num_batches=10):
 
         input_df = pd.DataFrame([row]) 
         probability = model.predict_proba(input_df)[0][1]
-        status = "SCRAP WARNING" if probability >= threshold else "PASS (STABLE)"
+        status = "FAIL" if probability >= threshold else "PASS"
         
         print(f"[{i+1}/{num_batches}] Batch ID: {idx} | Probability: {probability:.1%} | Status: {status}")
         time.sleep(1.5)
