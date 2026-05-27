@@ -15,7 +15,7 @@ To solve this, this project developed a machine learning pipeline to:
 2.  **Optimize Business Value:** Tuned the model based on financial impact (Cost of Scrap vs. Cost of Inspection) rather than just raw accuracy.
 3.  **Define Control Limits:** Used interpretability techniques to propose actionable changes similar to SPC.
 
-For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit, which simulates live inference on process data for predicting real time yield status. The link to the dashboard can be viewed here: https://secom-dash.streamlit.app/ 
+For further visualization, the code from the notebook has been implemented to generate a process dashboard in Streamlit, which simulates live inference on process data for predicting real time yield status. The dashboard can be viewed here: https://secom-dash.streamlit.app/ 
 
 ---
 
