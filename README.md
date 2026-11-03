@@ -1,14 +1,12 @@
 # Semiconductor Yield Optimization & Root Cause Analysis
 ### Determining Sensor Limits for Manufacturing using XGBoost and SHAP
 
-![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.9-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-Model-orange?style=for-the-badge)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SHAP](https://img.shields.io/badge/SHAP-203858?style=for-the-badge)
-![Cost-sensitive learning](https://img.shields.io/badge/Cost--sensitive%20learning-203858?style=for-the-badge)
-![Domain](https://img.shields.io/badge/Domain-Manufacturing-lightgrey?style=for-the-badge)
+![XGBoost](https://img.shields.io/badge/XGBoost-E87500?style=for-the-badge)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![SHAP](https://img.shields.io/badge/SHAP-A64CA6?style=for-the-badge)
 
 ## Summary
 This project uses the UCI SECOM dataset to study defect detection when failures are rare and missed defects cost more than false alarms. The pipeline combines preprocessing, cost-sensitive XGBoost and model interpretation to:
@@ -67,7 +65,6 @@ I used **Partial Dependence Plots (PDP)** to examine the model response to Senso
 * **Recommendation:** Evaluate **-0.012** as a candidate Upper Control Limit (UCL) for Sensor 103. The model response alone does not establish that changing the sensor value will prevent a defect.
 
 ![Sensor 103 PDP](assets/operating_103.png)
-
 
 ---
 
